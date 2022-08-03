@@ -1,0 +1,317 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+
+{
+	"name": "VSCode Default",
+	"author": "Justin Ebanks",
+    "variables":
+    {
+		"bg": "#1E1E1E",
+		"darkblue": "#539CD6",
+		"orange": "#CE9178",
+		"lightblue": "#9CDCFE",
+		"pink": "#C586C0",
+		"teal": "#4EC9A4",
+		"lightgreen": "#B5CEA8",
+		"lightyellow": "#D6D3A1",
+		"green": "#6A9955",
+		"white": "#ffffff",
+		"yellow": "#FFD408",
+		"purple": "#DA70D6",
+		"gray": "#808080",
+		"blue": "#1B8FFF"
+    },
+    
+    "globals":
+    {
+        "caret": "color(#ffffff)", // Cursor
+        "block_caret": "color(#00ffff",
+        "block_caret_border": "color(#ffffff)",
+        "invisibles": "color(#ffffff)",
+        "misspelling": "var(red2)",
+        "active_guide": "color(#ffffff)",
+        "find_highlight_foreground": "#ffffff", // Find Highlight Text Color
+        "find_highlight": "hsla(55, 8%, 31%, 0.7)", // Find Highlight Background
+        "brackets_options": "underline",
+        "brackets_foreground": "color(#ffffff)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "color(#ffffff)",
+        "tags_options": "stippled_underline",
+        "foreground": "#ffffff", // Line Number Color
+        "background": "var(bg)", // Editor Background
+        "line_highlight": "var(teal)", // Line Number Highlighting
+        "selection": "hsla(55, 8%, 31%, 0.7)", // Selection Background
+        "selection_border": "var(teal)", // Selection Border
+    },
+
+    "rules":
+    [
+
+    	// ================= GENERAL ==================
+
+
+    	{
+    		"name": "Default",
+    		"scope": "",
+    		"foreground": "var(white)"
+    	},
+    	{
+    		"name": "Keyword Operators",
+    		"scope": "keyword.declaration, keyword.operator, storage.modifier, meta.function.return-type",
+    		"foreground": "var(darkblue)",
+
+    	},
+    	{
+    		"name": "Variable Names",
+    		"scope": "variable.other, meta.property.object",
+    		"foreground": "var(lightblue)",
+    	},
+    	{
+			"name": "Variable Names",
+			"scope": "variable.other.readwrite, support.type.object",
+			"foreground": "var(lightblue)",
+    	},
+		{
+			"name": "Control Keywords",
+			"scope": "keyword.control.conditional, keyword.control.loop, keyword.control.exception, keyword.control.flow, keyword.control.import-export, keyword.control.import, keyword.control.switch",
+			"foreground": "var(pink)",
+		},
+		{
+			"name": "Comments",
+			"scope": "comment",
+			"foreground": "var(green)",
+		},
+		{
+			"name": "Strings",
+			"scope": "string.quoted",
+			"foreground": "var(orange)",
+		},
+		{
+			"name": "Numbers",
+			"scope": "constant.numeric",
+			"foreground": "var(lightgreen)",
+		},
+		{
+			"name": "Functions",
+			"scope": "variable.function, support.function, entity.name.function, meta.function-call.constructor",
+			"foreground": "var(lightyellow)",
+		},
+		{
+			"name": "This Variable",
+			"scope": "variable.language",
+			"foreground": "var(darkblue)",
+		},
+		{
+			"name": "Language Constants (Booleans, Null)",
+			"scope": "constant.language.boolean, constant.language.null",
+			"foreground": "var(darkblue)",
+		},
+		{
+			"name": "Classes",
+			"scope": "entity.name.class, support.class, support.constant.builtin, entity.other.inherited-class",
+			"foreground": "var(teal)",
+		},
+		{
+			"name": "Function Definition Parameters",
+			"scope": "variable.parameter",
+			"foreground": "var(lightblue)",
+		},
+		{
+			"name": "Array Brackets",
+			"scope": "punctuation.section.brackets, punctuation.section.sequence",
+			"foreground": "var(yellow)",
+		},
+		{
+			"name": "Function Parameter Parenthesis",
+			"scope": "punctuation.section.group",
+			"foreground": "var(yellow)",
+		},
+		{
+			"name": "Block Curly Braces",
+			"scope": "punctuation.section.block, punctuation.section.mapping",
+			"foreground": "var(yellow)",
+		},
+		{
+			"name": "Type Hints",
+			"scope": "meta.declaration.type, storage.type.class, storage.type.primitive",
+			"foreground": "var(teal)"
+		},
+		{
+			"name": "JSON Key",
+			"scope": "meta.mapping.key string.quoted, meta.mapping.key string.unquoted",
+			"foreground": "var(lightblue)"
+		},
+		{
+			"name": "F-Strings",
+			"scope": "punctuation.section.interpolation, punctuation.definition.interpolation",
+			"foreground": "var(yellow)"
+		},		
+
+		// Puncuations Within Blocks
+		{
+			"name": "Brackets/Parenthesis Within Blocks",
+			"scope": "(meta.block punctuation.section.brackets | meta.block punctuation.section.sequence | meta.block punctuation.section.group | meta.block punctuation.section.block | meta.block punctuation.section.mapping | meta.block punctuation.section.arguments | meta.block punctuation.section.parameters | meta.block punctuation.section.sequence)",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Blocks Within Blocks",
+			"scope": "(meta.block meta.block punctuation.section.brackets | meta.block meta.block punctuation.section.sequence | meta.block meta.block punctuation.section.group | meta.block meta.block punctuation.section.block | meta.block meta.block punctuation.section.mapping | meta.block meta.block punctuation.section.arguments | meta.block meta.block punctuation.section.parameters | meta.block meta.block punctuation.section.sequence)",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Blocks Within Blocks Within Blocks",
+			"scope": "(meta.block meta.block meta.block punctuation.section.brackets | meta.block meta.block meta.block punctuation.section.sequence | meta.block meta.block meta.block punctuation.section.group | meta.block meta.block meta.block punctuation.section.block | meta.block meta.block meta.block punctuation.section.mapping | meta.block meta.block meta.block punctuation.section.arguments | meta.block meta.block meta.block punctuation.section.parameters | meta.block meta.block meta.block punctuation.section.sequence)",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Blocks Within Blocks Within Blocks Within Blocks",
+			"scope": "(meta.block meta.block meta.block meta.block punctuation.section.brackets | meta.block meta.block meta.block meta.block punctuation.section.sequence | meta.block meta.block meta.block meta.block punctuation.section.group | meta.block meta.block meta.block meta.block punctuation.section.block | meta.block meta.block meta.block meta.block punctuation.section.mapping | meta.block meta.block meta.block meta.block punctuation.section.arguments | meta.block meta.block meta.block meta.block punctuation.section.parameters | meta.block meta.block meta.block meta.block punctuation.section.sequence)",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Blocks Within Blocks Within Blocks Within Blocks Within Blocks",
+			"scope": "(meta.block meta.block meta.block meta.block meta.block punctuation.section.brackets | meta.block meta.block meta.block meta.block meta.block punctuation.section.sequence | meta.block meta.block meta.block meta.block meta.block punctuation.section.group | meta.block meta.block meta.block meta.block meta.block punctuation.section.block | meta.block meta.block meta.block meta.block meta.block punctuation.section.mapping | meta.block meta.block meta.block meta.block meta.block punctuation.section.arguments | meta.block meta.block meta.block meta.block meta.block punctuation.section.parameters | meta.block meta.block meta.block meta.block meta.block punctuation.section.sequence)",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Blocks Within Blocks Within Blocks Within Blocks Within Blocks Within Blocks",
+			"scope": "(meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.brackets | meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.sequence | meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.group | meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.block | meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.mapping | meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.arguments | meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.parameters | meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.sequence)",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Blocks Within Blocks Within Blocks Within Blocks Within Blocks Within Blocks Within Blocks",
+			"scope": "(meta.block meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.brackets | meta.block meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.block | meta.block meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.group | meta.block meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.block | meta.block meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.mapping | meta.block meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.arguments | meta.block meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.parameters | meta.block meta.block meta.block meta.block meta.block meta.block meta.block punctuation.section.block)",
+			"foreground": "var(yellow)"
+		},
+
+		// Puncuations Within Sequences
+		{
+			"name": "Brackets/Parenthesis Within Sequences",
+			"scope": "(meta.sequence punctuation.section.brackets | meta.sequence punctuation.section.sequence | meta.sequence punctuation.section.group | meta.sequence punctuation.section.block | meta.sequence punctuation.section.mapping | meta.sequence punctuation.section.arguments | meta.sequence punctuation.section.parameters | meta.sequence punctuation.section.sequence)",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Sequences Within Sequences",
+			"scope": "(meta.sequence meta.sequence punctuation.section.brackets | meta.sequence meta.sequence punctuation.section.sequence | meta.sequence meta.sequence punctuation.section.group | meta.sequence meta.sequence punctuation.section.block | meta.sequence meta.sequence punctuation.section.mapping | meta.sequence meta.sequence punctuation.section.arguments | meta.sequence meta.sequence punctuation.section.parameters | meta.sequence meta.sequence punctuation.section.sequence)",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Sequences Within Sequences Within Sequences",
+			"scope": "(meta.sequence meta.sequence meta.sequence punctuation.section.brackets | meta.sequence meta.sequence meta.sequence punctuation.section.sequence | meta.sequence meta.sequence meta.sequence punctuation.section.group | meta.sequence meta.sequence meta.sequence punctuation.section.block | meta.sequence meta.sequence meta.sequence punctuation.section.mapping | meta.sequence meta.sequence meta.sequence punctuation.section.arguments | meta.sequence meta.sequence meta.sequence punctuation.section.parameters | meta.sequence meta.sequence meta.sequence punctuation.section.sequence)",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Sequences Within Sequences Within Sequences Within Sequences",
+			"scope": "(meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.brackets | meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.sequence | meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.group | meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.block | meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.mapping | meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.arguments | meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.parameters | meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.sequence)",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Sequences Within Sequences Within Sequences Within Sequences Within Sequences",
+			"scope": "(meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.brackets | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.sequence | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.group | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.block | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.mapping | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.arguments | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.parameters | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.sequence)",
+			"foreground": "var(purple)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Sequences Within Sequences Within Sequences Within Sequences Within Sequences Within Sequences",
+			"scope": "(meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.brackets | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.sequence | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.group | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.block | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.mapping | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.arguments | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.parameters | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.sequence)",
+			"foreground": "var(blue)"
+		},
+		{
+			"name": "Brackets/Parenthesis Within Sequences Within Sequences Within Sequences Within Sequences Within Sequences Within Sequences Within Sequences",
+			"scope": "(meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.brackets | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.sequence | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.group | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.block | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.mapping | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.arguments | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.parameters | meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence meta.sequence punctuation.section.sequence)",
+			"foreground": "var(yellow)"
+		},
+
+		// =================== HTML / JSX ==================
+
+		{
+			"name": "Tag Name",
+			"scope": "entity.name.tag.native, entity.name.tag.inline, entity.name.tag.block, entity.name.tag.structure, entity.name.tag.other, entity.name.tag.script, entity.name.tag.style",
+			"foreground": "var(darkblue)",
+		},
+		{
+			"name": "Element Attributes",
+			"scope": "source.js entity.other.attribute-name, text.html.basic entity.other.attribute-name, source.jsx entity.other.attribute-name",
+			"foreground": "var(lightblue)",
+		},
+		{
+			"name": "Tag Punctuations",
+			"scope": "punctuation.definition.tag",
+			"foreground": "var(gray)",
+		},
+		{
+			"name": "JSX Component",
+			"scope": "meta.tag.name entity.name.tag.js, meta.tag.name entity.name.tag.jsx",
+			"foreground": "var(teal)",
+		},
+
+		// =================== CSS =====================
+
+		{
+			"name": "CSS Selector",
+			"scope": "meta.selector.css",
+			"foreground": "var(yellow)",
+		},
+		{
+			"name": "CSS Property Name",
+			"scope": "meta.property-name",
+			"foreground": "var(lightblue)",
+		},
+		{
+			"name": "CSS Property Value",
+			"scope": "meta.property-value",
+			"foreground": "var(orange)",
+		},
+		{
+			"name": "CSS Punctuations",
+			"scope": "punctuation.separator.sequence.css",
+			"foreground": "var(white)",
+		},
+
+		// ================ PYTHON ===================
+
+		{
+			"name": "Python Variable Names",
+			"scope": "source.python",
+			"foreground": "var(lightblue)",
+		},
+		{
+			"name": "Python Function Argument Parenthesis",
+			"scope": "source.python punctuation.section.arguments, source.python punctuation.section.parameters",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "Python Commas",
+			"scope": "source.python punctuation.separator",
+			"foreground": "var(white)"
+		},
+		{
+			"name": "Python List Brackets",
+			"scope": "source.python punctuation.section.sequence",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "Other Basic Punctuations",
+			"scope": "source.python punctuation.section.function, source.python punctuation.accessor.dot",
+			"foreground": "var(white)"
+		},
+		{
+			"name": "Import Name",
+			"scope": "source.python meta.statement.import",
+			"foreground": "var(teal)"
+		},
+		{
+			"name": "Function Annotations",
+			"scope": "meta.function.annotation",
+			"foreground": "var(teal)"
+		},
+
+		// =========== JAVA =================
+
+		{
+			"name": "New Keyword",
+			"scope": "keyword.other.storage.new",
+			"foreground": "var(darkblue)"
+		}, 
+	]
+}
+
+

@@ -1,0 +1,251 @@
+// Documentation at https://www.sublimetext.com/docs/color_schemes.html
+
+{
+	"name": "Ayu Dark",
+	"author": "Justin Ebanks",
+    "variables":
+    {
+		"bg": "#0B0E14",
+		"orange": "#FF8F40", // Keywords
+		"lightgreen": "#AAD94C", // Strings
+		"lightorange": "#FFB454", // Functions, Attrs
+		"purple": "#CB9DF8", // Function Parameters, Numbers
+		"baby_blue": "#24BAE6", // HTML Tags
+		"darkblue": "#21647D", // HTML Tag Punctuation
+		"red": "#F7768E", // Self
+		"yellow": "#E8D700", // Punctuations
+		"gray": "#666B8C", // Comments
+		"white": "#BFBDB6", // Variables
+
+		"lightblue": "#7DCFFF", // Keywords
+		"teal": "#25AAC2", // Punctuations
+		"lightteal": "#73DACA", // Objects
+		"middleblue": "#0DB9D7", // Imports
+		"violet": "#BA3C97", // Tag Puncuations
+
+
+
+    },
+    
+    "globals":
+    {
+        "caret": "color(#ffffff)", // Cursor
+        "block_caret": "color(#00ffff",
+        "block_caret_border": "color(#ffffff)",
+        "invisibles": "color(#ffffff)",
+        "misspelling": "var(red)",
+        "active_guide": "color(#ffffff)",
+        "find_highlight_foreground": "#ffffff", // Find Highlight Text Color
+        "find_highlight": "hsla(55, 8%, 31%, 0.7)", // Find Highlight Background
+        "brackets_options": "underline",
+        "brackets_foreground": "color(#ffffff)",
+        "bracket_contents_options": "underline",
+        "bracket_contents_foreground": "color(#ffffff)",
+        "tags_options": "stippled_underline",
+        "foreground": "var(white)", // Line Number Color
+        "background": "var(bg)", // Editor Background
+        "line_highlight": "var(middleblue)", // Line Number Highlighting
+        "selection": "hsla(55, 8%, 31%, 0.7)", // Selection Background
+        "selection_border": "var(middleblue)", // Selection Border
+    },
+
+    "rules":
+    [
+
+    	// ================= GENERAL ==================
+
+
+    	{
+    		"name": "Default",
+    		"scope": "",
+    		"foreground": "var(white)"
+    	},
+    	{
+    		"name": "Keyword Operators",
+    		"scope": "keyword.declaration, keyword.operator, storage.modifier, meta.function.return-type",
+    		"foreground": "var(orange)",
+
+    	},
+    	{
+    		"name": "Variable Names",
+    		"scope": "variable.other, meta.property.object",
+    		"foreground": "var(white)",
+    	},
+    	{
+			"name": "Variable Names",
+			"scope": "variable.other.readwrite, support.type.object",
+			"foreground": "var(white)",
+    	},
+		{
+			"name": "Control Keywords",
+			"scope": "keyword.control.conditional, keyword.control.loop, keyword.control.exception, keyword.control.flow, keyword.control.import-export, keyword.control.import, keyword.control.switch",
+			"foreground": "var(orange)",
+		},
+		{
+			"name": "Comments",
+			"scope": "comment",
+			"foreground": "var(gray)",
+			"font_style": "italic"
+		},
+		{
+			"name": "Strings",
+			"scope": "string.quoted",
+			"foreground": "var(lightgreen)",
+		},
+		{
+			"name": "Numbers",
+			"scope": "constant.numeric",
+			"foreground": "var(purple)",
+		},
+		{
+			"name": "Functions",
+			"scope": "variable.function, support.function, entity.name.function, meta.function-call.constructor",
+			"foreground": "var(lightorange)",
+		},
+		{
+			"name": "This Variable",
+			"scope": "variable.language",
+			"foreground": "var(red)",
+		},
+		{
+			"name": "Language Constants (Booleans, Null)",
+			"scope": "constant.language.boolean, constant.language.null",
+			"foreground": "var(purple)",
+		},
+		{
+			"name": "Classes",
+			"scope": "entity.name.class, support.class, support.constant.builtin, entity.other.inherited-class",
+			"foreground": "var(white)",
+		},
+		{
+			"name": "Function Definition Parameters",
+			"scope": "variable.parameter",
+			"foreground": "var(purple)",
+		},
+		{
+			"name": "Array Brackets",
+			"scope": "punctuation.section.brackets, punctuation.section.sequence",
+			"foreground": "var(yellow)",
+		},
+		{
+			"name": "Function Parameter Parenthesis",
+			"scope": "punctuation.section.group",
+			"foreground": "var(yellow)",
+		},
+		{
+			"name": "Block Curly Braces",
+			"scope": "punctuation.section.block, punctuation.section.mapping",
+			"foreground": "var(yellow)",
+		},
+		{
+			"name": "Type Hints",
+			"scope": "meta.declaration.type, storage.type.class, storage.type.primitive",
+			"foreground": "var(orange)"
+		},
+		{
+			"name": "JSON Key",
+			"scope": "meta.mapping.key string.quoted, meta.mapping.key string.unquoted",
+			"foreground": "var(baby_blue)"
+		},
+		{
+			"name": "F-Strings",
+			"scope": "punctuation.section.interpolation, punctuation.definition.interpolation",
+			"foreground": "var(yellow)"
+		},		
+
+
+		// =================== HTML / JSX ==================
+
+		{
+			"name": "Tag Name",
+			"scope": "entity.name.tag.native, entity.name.tag.inline, entity.name.tag.block, entity.name.tag.structure, entity.name.tag.other, entity.name.tag.script, entity.name.tag.style",
+			"foreground": "var(baby_blue)",
+		},
+		{
+			"name": "Element Attributes",
+			"scope": "source.js entity.other.attribute-name, text.html.basic entity.other.attribute-name, source.jsx entity.other.attribute-name",
+			"foreground": "var(lightorange)",
+		},
+		{
+			"name": "Tag Punctuations",
+			"scope": "punctuation.definition.tag",
+			"foreground": "var(darkblue)",
+		},
+		{
+			"name": "JSX Component",
+			"scope": "meta.tag.name entity.name.tag.js, meta.tag.name entity.name.tag.jsx",
+			"foreground": "var(baby_blue)",
+		},
+
+		// =================== CSS =====================
+
+		{
+			"name": "CSS Selector",
+			"scope": "meta.selector.css",
+			"foreground": "var(lightorange)",
+		},
+		{
+			"name": "CSS Property Name",
+			"scope": "meta.property-name",
+			"foreground": "var(baby_blue)",
+		},
+		{
+			"name": "CSS Property Value",
+			"scope": "meta.property-value",
+			"foreground": "var(orange)",
+		},
+		{
+			"name": "CSS Punctuations",
+			"scope": "punctuation.separator.sequence.css",
+			"foreground": "var(white)",
+		},
+
+		// ================ PYTHON ===================
+
+		{
+			"name": "Python Variable Names",
+			"scope": "source.python",
+			"foreground": "var(white)",
+		},
+		{
+			"name": "Python Function Argument Parenthesis",
+			"scope": "source.python punctuation.section.arguments, source.python punctuation.section.parameters",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "Python Commas",
+			"scope": "source.python punctuation.separator",
+			"foreground": "var(white)"
+		},
+		{
+			"name": "Python List Brackets",
+			"scope": "source.python punctuation.section.sequence",
+			"foreground": "var(yellow)"
+		},
+		{
+			"name": "Other Basic Punctuations",
+			"scope": "source.python punctuation.section.function, source.python punctuation.accessor.dot",
+			"foreground": "var(white)"
+		},
+		{
+			"name": "Import Name",
+			"scope": "source.python meta.statement.import",
+			"foreground": "var(white)"
+		},
+		{
+			"name": "Function Annotations",
+			"scope": "meta.function.annotation",
+			"foreground": "var(orange)"
+		},
+
+		// =========== JAVA =================
+
+		{
+			"name": "New Keyword",
+			"scope": "keyword.other.storage.new",
+			"foreground": "var(purple)"
+		}, 
+	]
+}
+
+
